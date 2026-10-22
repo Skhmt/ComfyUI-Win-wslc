@@ -2,7 +2,7 @@
 
 Windows Subsystem for Linux has released their [container implementation](https://learn.microsoft.com/en-us/windows/wsl/wsl-container), making running linux containers in Windows very easy.
 
-This is meant for x86-64 Windows and Nvidia GPUs. It may or may not work on ARM Windows and/or AMD or Intel GPUs.
+This is meant for x86-64 Windows, it has not been tested with ARM.
 
 ## Installing WSL2
 
@@ -22,8 +22,6 @@ You'll have to restart your computer
 
 `update.bat`: Updates the container image
 
-`zworker.bat`: Don't run this directly, it's automatically run from `_start.bat`
-
 ## Folders
 
 This will automatically create folders for you:
@@ -36,3 +34,11 @@ This will automatically create folders for you:
 ## Exiting
 
 Close the browser window
+
+## AMD GPU
+
+Modify `/lib/config.bat` by commenting out the nvidia line (4) with `::` and uncommenting out the *amd* line (7) by removing the preceding `::`
+
+## Intel GPU
+
+Modify `/lib/config.bat` by commenting out the nvidia line (4) with `::` and uncommenting out the *intel* line (10) by removing the preceding `::`
