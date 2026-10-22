@@ -2,12 +2,9 @@
 setlocal
 cd /d "%~dp0"
 
-:: --- Configuration --- ::
+call "%~dp0/lib/config.bat"
 
-set "OUTPUT_DIR=./output"
-set "COMFY_IMAGE=ghcr.io/skhmt/comfyui-bazzite-podman:main"
-
-:: --------------------- ::
+echo %COMFY_IMAGE%
 
 echo [1/4] Cleaning up any old container instances...
 wslc rm -f comfy >nul 2>&1
@@ -25,7 +22,7 @@ wslc run ^
 -v "./workflows:/app/user/default/workflows" ^
 -v "./custom_nodes:/app/custom_nodes" ^
 -v "./models:/app/models" ^
--v "%OUTPUT_DIR%:/app/output" ^
+-v "./output:/app/output" ^
 %COMFY_IMAGE%
 
 
@@ -48,6 +45,6 @@ if errorlevel 1 (
 echo [4/4] Launching Edge
 
 :: Uses PowerShell with an absolute path and hidden window style
-powershell -WindowStyle Hidden -Command "Start-Process '%~dp0zworker.bat' -WindowStyle Hidden"
+powershell -WindowStyle Hidden -Command "Start-Process '%~dp0/lib/worker.bat' -WindowStyle Hidden"
 
 exit
