@@ -14,26 +14,25 @@ You'll have to restart your computer
 
 ## Scripts
 
-`_start.bat`: Runs the program
+`_start.bat`: Runs the program and downloads the container if you didn't already - this is all you really need
 
 `nvidia-test.bat`: Tests if wslc and your nvidia drivers work
 
 `force-stop.bat`: Kills the wslc container if it didn't stop for some reason
 
-`update.bat`: Updates the ComfyUI container image
+`update.bat`: Updates the container image
 
-~~`zworker.bat`~~: Don't run this directly, it's automatically run from `_start.bat`
+`zworker.bat`: Don't run this directly, it's automatically run from `_start.bat`
 
 ## Folders
 
-This will automatically create folders for you 
+This will automatically create folders for you:
 
-Models into `models/`
-
-Custom nodes into `custom_nodes/`
-
-Workflows into `workflows/`
+- `models/`
+- `custom_nodes/`
+- `workflows/`
+- `output/`
 
 ## Exiting
 
-Close the window
+Close the browser window
