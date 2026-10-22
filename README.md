@@ -16,8 +16,6 @@ You'll have to restart your computer
 
 `_start.bat`: Runs the program and downloads the container if you didn't already - this is all you really need
 
-`nvidia-test.bat`: Tests if wslc and your nvidia drivers work
-
 `force-stop.bat`: Kills the wslc container if it didn't stop for some reason
 
 `update.bat`: Updates the container image
