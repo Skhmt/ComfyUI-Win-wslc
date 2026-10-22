@@ -37,8 +37,8 @@ Close the browser window
 
 ## AMD GPU
 
-Modify `/lib/config.bat` by commenting out the nvidia line (4) with `::` and uncommenting out the *amd* line (7) by removing the preceding `::`
+Modify `/lib/config.bat` by commenting out the nvidia line (2) with `::` and uncommenting out the *amd* line (5) by removing the preceding `::`
 
 ## Intel GPU
 
-Modify `/lib/config.bat` by commenting out the nvidia line (4) with `::` and uncommenting out the *intel* line (10) by removing the preceding `::`
+Modify `/lib/config.bat` by commenting out the nvidia line (2) with `::` and uncommenting out the *intel* line (8) by removing the preceding `::`
