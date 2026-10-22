@@ -1,5 +1,3 @@
-@echo off
-
 :: nvidia
 set "COMFY_IMAGE=ghcr.io/skhmt/comfyui-bazzite-podman:main"
 
