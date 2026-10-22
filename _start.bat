@@ -4,7 +4,7 @@ cd /d "%~dp0"
 
 call "%~dp0/lib/config.bat"
 
-echo %COMFY_IMAGE%
+echo Image: %COMFY_IMAGE%
 
 echo [1/4] Cleaning up any old container instances...
 wslc rm -f comfy >nul 2>&1
