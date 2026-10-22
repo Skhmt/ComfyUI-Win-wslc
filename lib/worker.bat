@@ -1,4 +1,3 @@
-echo [4/4] Launching Edge and waiting for session...
 :: Use PowerShell to launch Edge and output its PID to a temp file
 powershell -Command "$p = Start-Process msedge -ArgumentList '--app=http://localhost:8188', '--user-data-dir=%USERPROFILE%\ComfyEdge' -PassThru; $p.Id | Out-File -Encoding ascii '%TEMP%\comfy_edge.pid'"
 
@@ -25,5 +24,4 @@ tasklist /fi "imagename eq msedge.exe" 2>nul | find /i "msedge.exe" >nul
 if not errorlevel 1 goto CheckEdgeFallback
 
 :EdgeClosed
-echo Edge closed. Stopping ComfyUI container...
 wslc stop comfy
